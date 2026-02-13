@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,20 +35,32 @@
 
         /* ========== COLOR PALETTE (Dark Theme) ========== */
         :root {
-            --primary-color: #00d9ff;      /* Cyan */
-            --secondary-color: #0099cc;    /* Dark Cyan */
-            --accent-color: #ff006e;       /* Pink/Magenta */
-            --bg-dark: #0a0e27;            /* Dark background */
-            --bg-card: #1a1f3a;            /* Card background */
-            --bg-hover: #252d4a;           /* Hover background */
-            --text-light: #e0e0e0;         /* Light text */
-            --text-muted: #9ca3af;         /* Muted text */
-            --border-color: #2d3748;       /* Border color */
-            --gold: #ffd700;               /* Gold for badges */
+            --primary-color: #00d9ff;
+            /* Cyan */
+            --secondary-color: #0099cc;
+            /* Dark Cyan */
+            --accent-color: #ff006e;
+            /* Pink/Magenta */
+            --bg-dark: #0a0e27;
+            /* Dark background */
+            --bg-card: #1a1f3a;
+            /* Card background */
+            --bg-hover: #252d4a;
+            /* Hover background */
+            --text-light: #e0e0e0;
+            /* Light text */
+            --text-muted: #9ca3af;
+            /* Muted text */
+            --border-color: #2d3748;
+            /* Border color */
+            --gold: #ffd700;
+            /* Gold for badges */
         }
 
         /* ========== TYPOGRAPHY ========== */
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 1rem;
@@ -270,8 +283,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(30px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(30px);
+            }
         }
 
         .hero-content {
@@ -401,8 +421,15 @@
         }
 
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 30px rgba(0, 217, 255, 0.3); }
-            50% { box-shadow: 0 0 60px rgba(0, 217, 255, 0.6); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 60px rgba(0, 217, 255, 0.6);
+            }
         }
 
         .photo-circle:hover {
@@ -912,22 +939,50 @@
             will-change: transform, opacity;
         }
 
-        .reveal-up { transform: translateY(40px); }
-        .reveal-left { transform: translateX(-40px); }
-        .reveal-right { transform: translateX(40px); }
-        .reveal-scale { transform: scale(0.9); }
+        .reveal-up {
+            transform: translateY(40px);
+        }
+
+        .reveal-left {
+            transform: translateX(-40px);
+        }
+
+        .reveal-right {
+            transform: translateX(40px);
+        }
+
+        .reveal-scale {
+            transform: scale(0.9);
+        }
 
         .reveal.active {
             opacity: 1;
             transform: translate(0) scale(1);
         }
 
-        .delay-1 { transition-delay: 0.1s; }
-        .delay-2 { transition-delay: 0.2s; }
-        .delay-3 { transition-delay: 0.3s; }
-        .delay-4 { transition-delay: 0.4s; }
-        .delay-5 { transition-delay: 0.5s; }
-        .delay-6 { transition-delay: 0.6s; }
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        .delay-5 {
+            transition-delay: 0.5s;
+        }
+
+        .delay-6 {
+            transition-delay: 0.6s;
+        }
 
         /* ========== RESPONSIVE DESIGN ========== */
         @media (max-width: 768px) {
@@ -1040,102 +1095,104 @@
         }
     </style>
 </head>
+
 <body>
     <div class="site-wrapper">
-    <!-- ========== HEADER & NAVIGATION ========== -->
-    <header>
-        <nav class="container">
-            <!-- Logo/Name -->
-            <div class="logo">MT</div>
+        <!-- ========== HEADER & NAVIGATION ========== -->
+        <header>
+            <nav class="container">
+                <!-- Logo/Name -->
+                <div class="logo">MT</div>
 
-            <!-- Navigation Links (Desktop) -->
-            <ul class="nav-links">
+                <!-- Navigation Links (Desktop) -->
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact-info">Contact</a></li>
+                </ul>
+
+                <!-- Hamburger Menu Button (Mobile/Tablet) -->
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Sidebar Menu (Mobile/Tablet) -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact-info">Contact</a></li>
             </ul>
+        </aside>
 
-            <!-- Hamburger Menu Button (Mobile/Tablet) -->
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
+        <!-- Sidebar Overlay (Mobile/Tablet) -->
+        <div class="sidebar-overlay"></div>
 
-    <!-- Sidebar Menu (Mobile/Tablet) -->
-    <aside class="sidebar">
-        <ul class="sidebar-menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact-info">Contact</a></li>
-        </ul>
-    </aside>
+        <!-- ========== HERO SECTION ========== -->
+        <!-- Main landing area with profile and call-to-action -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Hero Text -->
+                    <div class="hero-text reveal reveal-left">
+                        <h1>Manish Thakur</h1>
+                        <p class="hero-subtitle">Software Developer</p>
+                        <p class="hero-description">
+                            I craft clean, efficient code and build stunning web applications that solve real problems.
+                            Passionate about learning, innovation, and creating digital solutions that make a
+                            difference.
+                        </p>
 
-    <!-- Sidebar Overlay (Mobile/Tablet) -->
-    <div class="sidebar-overlay"></div>
-
-    <!-- ========== HERO SECTION ========== -->
-    <!-- Main landing area with profile and call-to-action -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <!-- Hero Text -->
-                <div class="hero-text reveal reveal-left">
-                    <h1>Manish Thakur</h1>
-                    <p class="hero-subtitle">Software Developer</p>
-                    <p class="hero-description">
-                        I craft clean, efficient code and build stunning web applications that solve real problems. 
-                        Passionate about learning, innovation, and creating digital solutions that make a difference.
-                    </p>
-
-                    <!-- Badges -->
-                    <div class="badges">
-                        <span class="badge">Full Stack</span>
-                        <span class="badge">Problem Solver</span>
-                        <span class="badge">Always Learning</span>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact-info" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-
-                    <!-- Location & Time -->
-                    <div class="location-info">
-                        <div class="location-item">
-                            <span>📍</span>
-                            <div>
-                                <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">LOCATION</p>
-                                <p style="margin: 0; color: var(--primary-color); font-weight: 600;">India</p>
-                            </div>
+                        <!-- Badges -->
+                        <div class="badges">
+                            <span class="badge">Full Stack</span>
+                            <span class="badge">Problem Solver</span>
+                            <span class="badge">Always Learning</span>
                         </div>
-                        <div class="location-item">
-                            <span>⏰</span>
-                            <div>
-                                <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">CURRENT TIME</p>
-                                <p style="margin: 0; color: var(--primary-color); font-weight: 600;" id="currentTime">--:-- IST</p>
+
+                        <!-- CTA Buttons -->
+                        <div class="cta-buttons">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact-info" class="btn btn-secondary">Get In Touch</a>
+                        </div>
+
+                        <!-- Location & Time -->
+                        <div class="location-info">
+                            <div class="location-item">
+                                <span>📍</span>
+                                <div>
+                                    <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">LOCATION</p>
+                                    <p style="margin: 0; color: var(--primary-color); font-weight: 600;">India</p>
+                                </div>
+                            </div>
+                            <div class="location-item">
+                                <span>⏰</span>
+                                <div>
+                                    <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">CURRENT TIME</p>
+                                    <p style="margin: 0; color: var(--primary-color); font-weight: 600;"
+                                        id="currentTime">--:-- IST</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Hero Image -->
-                <div class="hero-image reveal reveal-right">
-                    <label for="photoUploadHero" class="photo-circle">
-                        <div class="photo-inner">
-                            <img id="photoImageHero" src="" alt="Profile Photo" style="display: none;">
-                            <span id="photoIconHero">📷</span>
-                        </div>
+                    <!-- Hero Image -->
+                    <div class="hero-image reveal reveal-right">
+                        <label for="photoUploadHero" class="photo-circle">
+                            <img id="photoImageHero" src="profile.jpg" alt="Profile Photo" style="display: block;">
+                            <span id="photoIconHero" style="display: none;">📷</span>
+                    </div>
                     </label>
                     <input type="file" id="photoUploadHero" class="photo-input" accept="image/*">
                 </div>
             </div>
-        </div>
+    </div>
     </section>
 
     <!-- ========== ABOUT SECTION ========== -->
@@ -1148,15 +1205,20 @@
                 <div class="about-text reveal reveal-up">
                     <h3>Who I Am</h3>
                     <p>
-                        Hi! I'm <span class="highlight">Manish Thakur</span>, a passionate software developer focused on creating 
-                        intuitive and efficient web applications. I enjoy problem-solving and constantly learning new technologies.
+                        Hi! I'm <span class="highlight">Manish Thakur</span>, a passionate software developer focused on
+                        creating
+                        intuitive and efficient web applications. I enjoy problem-solving and constantly learning new
+                        technologies.
                     </p>
                     <p>
-                        With experience in full-stack development, I specialize in building responsive websites and applications that 
-                        provide great user experiences. I believe in writing clean, maintainable code and following industry best practices.
+                        With experience in full-stack development, I specialize in building responsive websites and
+                        applications that
+                        provide great user experiences. I believe in writing clean, maintainable code and following
+                        industry best practices.
                     </p>
                     <p>
-                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                        projects,
                         or learning something new!
                     </p>
                 </div>
@@ -1165,15 +1227,15 @@
                 <div class="about-text reveal reveal-up delay-1">
                     <h3>My Journey</h3>
                     <p>
-                        I started my journey into software development because I wanted to build things that matter. 
+                        I started my journey into software development because I wanted to build things that matter.
                         Every project is an opportunity to improve my skills and tackle interesting challenges.
                     </p>
                     <p>
-                        I'm committed to continuous learning and staying updated with industry best practices. 
+                        I'm committed to continuous learning and staying updated with industry best practices.
                         My goal is to create software that is not only functional but also beautiful and user-friendly.
                     </p>
                     <p>
-                        I love collaborating with others and contributing to projects that make a positive impact. 
+                        I love collaborating with others and contributing to projects that make a positive impact.
                         Let's build something amazing together!
                     </p>
                 </div>
@@ -1246,7 +1308,8 @@
                             <span class="project-tag">MongoDB</span>
                         </div>
                         <h3>E-Commerce Platform</h3>
-                        <p>A full-featured online store with secure payment integration and real-time inventory management.</p>
+                        <p>A full-featured online store with secure payment integration and real-time inventory
+                            management.</p>
                         <div class="project-links">
                             <a href="#">Live Demo</a>
                             <a href="#">GitHub</a>
@@ -1262,7 +1325,8 @@
                             <span class="project-tag">PostgreSQL</span>
                         </div>
                         <h3>Analytics Dashboard</h3>
-                        <p>Data visualization tool for monitoring server performance and user engagement metrics in real-time.</p>
+                        <p>Data visualization tool for monitoring server performance and user engagement metrics in
+                            real-time.</p>
                         <div class="project-links">
                             <a href="#">Live Demo</a>
                             <a href="#">GitHub</a>
@@ -1292,7 +1356,7 @@
     <section class="contact-info" id="contact-info">
         <div class="container">
             <h2>How To Reach Me</h2>
-            
+
             <!-- Contact Methods Cards -->
             <div class="contact-methods">
                 <!-- Email Card -->
@@ -1387,7 +1451,7 @@
         document.querySelector('.photo-circle').addEventListener('click', () => photoUploadHero.click());
 
         // Handle file selection
-        photoUploadHero.addEventListener('change', function(e) {
+        photoUploadHero.addEventListener('change', function (e) {
             const file = e.target.files[0];
             if (file) {
                 const maxSize = 5 * 1024 * 1024;
@@ -1404,7 +1468,7 @@
                 }
 
                 const reader = new FileReader();
-                reader.onload = function(event) {
+                reader.onload = function (event) {
                     photoImageHero.src = event.target.result;
                     photoImageHero.style.display = 'block';
                     photoIconHero.style.display = 'none';
@@ -1415,7 +1479,7 @@
         });
 
         // Load saved photo on page load
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const savedPhoto = localStorage.getItem('profilePhoto');
             if (savedPhoto) {
                 photoImageHero.src = savedPhoto;
@@ -1463,7 +1527,7 @@
 
         // ========== SMOOTH SCROLLING ==========
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
                 if (href !== '#') {
                     e.preventDefault();
@@ -1494,4 +1558,5 @@
         });
     </script>
 </body>
+
 </html>
